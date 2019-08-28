@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let str = "Toi yeu ngon ngu lap trinh Javascript";
+    let a = "a";
+    function count(str,a){
+        let arr = str.split("");
+        let dem = 0;
+        console.log(arr);
+        for (let i = 0; i< arr.length ; i++){
+            if(arr[i]===a){
+                dem++
+            }
+        }
+        return dem;
+    }
+    alert(count(str,a));
+    let b = str.split(" ");
+    alert(b.length);
+    let c= str.replace("Javascrip","Typescript");
+    alert(c);
+
+
+</script>
+</html>

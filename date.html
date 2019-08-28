@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>date</title>
+</head>
+<body>
+
+</body>
+<script>
+    let DateNow = function (hour,day,month,year) {
+        this.hour = hour;
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.getHours = function () {
+            return this.hour;
+        };
+        this.getDay = function () {
+            return this.day;
+        };
+        this.getMonth = function () {
+            return this.month;
+        };
+        this.getYear = function () {
+            return this.year;
+        };
+    };
+
+    let YourDate = function (hour,day,month,year) {
+        this.hour = hour;
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.getHours = function () {
+            return this.hour;
+        };
+        this.getDay = function () {
+            return this.day;
+        };
+        this.getMonth = function () {
+            return this.month;
+        };
+        this.getYear = function () {
+            return this.year;
+        };
+        this.getLiveYear = function (DateNow) {
+            return DateNow.getYear() - this.year;
+        }
+    };
+
+    let dateNow1 = new DateNow(8,29,8,2019);
+    let yourDate1 = new YourDate(17,15,3,1994);
+    let yourYear = yourDate1.getLiveYear(dateNow1);
+    let yourMonth = yourYear*12;
+    let yourDay = yourMonth*30;
+    let yourHour = yourDay*24;
+    let yourMinute = yourHour*60;
+    let yourSecond = yourMinute*60;
+    document.write("Số năm bạn sống  "+yourYear+"<br/>");
+    document.write("Số tháng bạn sống  "+yourMonth+"<br/>");
+    document.write("Số ngày bạn sống  "+yourDay+"<br/>");
+    document.write("Số giờ bạn sống  "+yourHour+"<br/>");
+    document.write("Số giây bạn sống  "+yourMinute+"<br/>");
+    document.write("Số giây bạn sống  "+yourSecond+"<br/>");
+
+</script>
+</html>
